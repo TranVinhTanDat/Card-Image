@@ -1,41 +1,61 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Card Image</title>
-    <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-</head>
-<body>
-    
+    <link rel="shortcut icon" href="./icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  </head>
+  <body>
     <div id="drag-container">
-        <div id="spin-container">
-          <img src="./img/TNT.png" alt="">
-          <img src="./img/TNT.png" alt="">
-          <img src="./img/TNT.png" alt="">
-          <img src="./img/TNT.png" alt="">
-          <img src="./img/TNT.png" alt="">
-          <img src="./img/TNT.png" alt="">
-          <img src="./img/TNT.png" alt="">
-          <img src="./img/TNT.png" alt="">
-          
-            <p>My Love</p>
-          
-        
-        </div>
-        <div id="ground"></div>
+      <div id="spin-container">
+        <img src="./img/A1.jpg" alt="" />
+        <img src="./img/A2.jpg" alt="" />
+        <img src="./img/A3.jpg" alt="" />
+        <img src="./img/A4.jpg" alt="" />
+        <img src="./img/A5.jpg" alt="" />
+        <img src="./img/A6.jpg" alt="" />
+        <img src="./img/A7.jpg" alt="" />
+        <img src="./img/A8.jpg" alt="" />
+
+        <p>Hoàng Ngọc Anhhhh</p>
       </div>
-      
-      <div id="music-container"></div>
-      <div id="canva">
+      <div id="ground"></div>
+    </div>
+
+    <div id="music-container"></div>
+    <div id="canva">
       <canvas id="canvas"></canvas>
     </div>
-    <audio src="./music.mp3" autoplay loop></audio>
+    <div id="speaker-icon" class="fa fa-volume-up"></div>
+    <audio id="background-music" src="./MotDemSay.mp3" loop></audio>
     <script src="main.js"></script>
-</body>
+    <script>
+      document.getElementById('speaker-icon').addEventListener('click', function() {
+          var audio = document.getElementById('background-music');
+          if (audio.paused) {
+              audio.play();
+              this.classList.remove('fa-volume-mute');
+              this.classList.add('fa-volume-up');
+          } else {
+              audio.pause();
+              this.classList.remove('fa-volume-up');
+              this.classList.add('fa-volume-mute');
+          }
+      });
+  </script>
+  
+  </body>
 </html>

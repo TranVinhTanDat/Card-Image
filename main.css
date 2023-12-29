@@ -158,3 +158,18 @@ p {
     font-size: 4vw;
     
 }
+
+#drag-container img {
+  width: 200px;   /* Thiết lập chiều rộng 200px */
+  height: 150px;  /* Thiết lập chiều cao 200px */
+  /* Các quy tắc khác vẫn giữ nguyên */
+}
+
+#speaker-icon {
+  font-size: 30px; /* Kích thước của icon */
+  color: white; /* Màu của icon */
+  position: fixed; /* Hoặc absolute tùy thuộc vào layout của bạn */
+  top: 20px; /* Vị trí từ trên xuống */
+  right: 20px; /* Vị trí từ phải qua */
+  cursor: pointer; /* Biến con trỏ thành hình bàn tay khi di chuột qua icon */
+}
